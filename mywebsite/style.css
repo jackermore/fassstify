@@ -64,8 +64,7 @@ body {
   text-align: center;
   color: white;
 
-  /* GitHub Pages용 이미지 경로 */
-  background-image: url("images/fashion2.jpg");
+  background-image: url("images/fashion2.jpg"); /* 상대경로 기준 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,6 +159,66 @@ body {
   margin-bottom: 1rem;
 }
 
+/* 업로드 & 문의 섹션 */
+.form-section {
+  padding: 5rem 10%;
+  background-color: #111;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-section h1 {
+  font-size: 2rem;
+  color: #1db954;
+  margin-bottom: 1rem;
+}
+
+.form-section p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.form-section form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-section input,
+.form-section textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #222;
+  color: #fff;
+}
+
+.form-section input::placeholder,
+.form-section textarea::placeholder {
+  color: #aaa;
+}
+
+.form-section button.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  background: #1db954;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-section button.btn:hover {
+  background: #17a44f;
+}
+
 /* 푸터 */
 footer {
   text-align: center;
@@ -167,5 +226,76 @@ footer {
   background: #000;
   color: #555;
   font-size: 0.9rem;
+}
+
+/* 업로드 섹션 */
+.upload-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.upload-box {
+  background-color: #1c1c1c;
+  padding: 40px;
+  border-radius: 15px;
+  width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.upload-box h1 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.upload-box p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.upload-area {
+  border: 2px dashed;
+  border-image: linear-gradient(45deg, #1db954, #17a44f) 1;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: #262626;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.upload-area:hover {
+  transform: translateY(-5px);
+  background-color: #2b2b2b;
+}
+
+.upload-icon {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.upload-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #3cd070;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.upload-btn:hover {
+  background-color: #2fa35a;
+  transform: translateY(-2px);
 }
 
